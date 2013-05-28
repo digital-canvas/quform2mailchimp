@@ -4,7 +4,7 @@ Plugin Name: Quform 2 Mailchimp
 Plugin URI: https://github.com/digital-canvas/wp-quform2mailchimp
 Description: Allows subscribing users to Mailchimp lists on Quform form submissions. Requires both the Quform and MailChimp plugins to be installed.
 Version: 0.1
-Author: Jonathan Bernardi
+Author: Digital Canvas
 Author URI: http://www.digitalcanvas.com
 */
 
