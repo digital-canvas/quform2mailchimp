@@ -22,6 +22,14 @@ register_deactivation_hook(__FILE__,function(){
 
 if ( is_admin() ){
   add_action('admin_init', function(){
+
+    add_filter('plugin_action_links_'.plugin_basename(__FILE__), function($links){
+      $settings_page = add_query_arg(array('page' => 'quform2mailchimp'), admin_url('options-general.php'));
+      $settings_link = '<a href="'.esc_url($settings_page).'">Settings</a>';
+    	array_unshift($links, $settings_link);
+      return $links;
+    }, 10, 1);
+
     require_once(__DIR__.'/includes/Options.php');
     $settings = get_option('quform2mailchimp_options');
     $option = new Quform2Mailchimp\Options($settings);
